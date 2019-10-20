@@ -108,6 +108,8 @@ log "`date`: Intel Puma Toolchain - Extract and patch buildroot"
 tar xjf $BUILDROOT_NAME.tar.bz2
 mkdir -p $BUILDROOT_NAME/package/gcc/$GCC_VERSION || fatal "Failed to create gcc patches dir"
 cp "${BUILDROOT_NAME}-patches/gcc"/* $BUILDROOT_NAME/package/gcc/$GCC_VERSION/
+mkdir -p $BUILDROOT_NAME/package/uclibc/0.9.33.2 || fatal "Failed to create uclibc patches dir"
+cp "${BUILDROOT_NAME}-patches/uclibc"/* $BUILDROOT_NAME/package/uclibc/0.9.33.2/
 
 log "`date`: Intel Puma Toolchain - Extract Intel Puma addins"
 
